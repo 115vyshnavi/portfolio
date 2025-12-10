@@ -1,0 +1,30 @@
+!DOCTYPE html
+html
+head
+  titleHTML Forms Practicetitle
+head
+body
+
+  h2Contact Formh2
+
+  form
+    labelNamelabelbr
+    input type=textbrbr
+
+    labelEmaillabelbr
+    input type=emailbrbr
+
+    labelGenderlabelbr
+    input type=radio name=gender Male
+    input type=radio name=gender Femalebrbr
+
+    labelSkillslabelbr
+    input type=checkbox HTML
+    input type=checkbox CSS
+    input type=checkbox JavaScriptbrbr
+
+    button type=submitSubmitbutton
+  form
+
+body
+html
