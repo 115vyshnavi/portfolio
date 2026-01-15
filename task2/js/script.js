@@ -1,10 +1,15 @@
 // SHOW / HIDE PASSWORD
 function togglePassword() {
-    const passwords = document.querySelectorAll('input[type="password"]');
-    passwords.forEach(pwd => {
-        pwd.type = pwd.type === "password" ? "text" : "password";
-    });
+    const password = document.getElementById("loginPassword") 
+                  || document.getElementById("regPassword");
+
+    if (!password) return;
+
+    password.type = password.type === "password" ? "text" : "password";
 }
+
+
+
 
 // LOGIN VALIDATION
 const loginForm = document.getElementById("loginForm");
@@ -33,8 +38,8 @@ if (loginForm) {
 const registerForm = document.getElementById("registerForm");
 
 if (registerForm) {
-    registerForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+   
+        
 
         const password = document.getElementById("regPassword").value;
         const confirm = document.getElementById("confirmPassword").value;
@@ -49,7 +54,7 @@ if (registerForm) {
         error.textContent = "Registration validation successful (demo)";
         error.classList.remove("text-danger");
         error.classList.add("text-success");
-    });
+    );
 }
 // DUMMY AJAX EMAIL CHECK (SIMULATION)
 function checkEmailAvailability(email, callback) {
